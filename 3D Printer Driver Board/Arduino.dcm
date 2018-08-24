@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ArduinoDue
+D The Arduino Due Microcontroller development board. Equipped with an ARM SAM3X8E Processor. A pinout for the development board can be found here: https://forum.arduino.cc/index.php?topic=132130.0. Further information about the development board can be found here: https://store.arduino.cc/arduino-due.
+$ENDCMP
+#
+#End Doc Library

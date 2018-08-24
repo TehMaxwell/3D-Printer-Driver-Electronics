@@ -1,6 +1,6 @@
 # 3D Printer Driver Electronics
 
-This is a custom 3D Printer Driver Electronics board for use with an Arduino Due or Mega in conjuction with the Marlin Firmware. This circuit board is currently under development.
+This is a custom 3D Printer Driver Electronics board for use with an Arduino Due in conjuction with the Marlin Firmware. This circuit board is currently under development.
 
 ## Development Specification
 
@@ -13,7 +13,7 @@ The following are the requirements for the Driver Electronics:
 
 - Support for X, Y and Z Axis Control.
 - Support for Extruder Control.
-- Connectivity via USB (Fulfilled by Arduino Due or Arduino Mega).
+- Connectivity via USB (Fulfilled by Arduino Due).
 - Wired Internet Connectivity for the upload of GCode files to the 3D Printer.
 - Wireless Internet Connectivity for the upload of GCode files to the 3D Printer.
 - Ability to connect to an Alphanumeric LCD Display for a local readout of 3D Printer status.
