@@ -17,30 +17,30 @@ $EndDescr
 $Comp
 L Arduino:ArduinoDue MCU1
 U 1 1 5B80B650
-P 5750 3650
-F 0 "MCU1" H 5750 6465 50  0000 C CNN
-F 1 "ArduinoDue" H 5750 6374 50  0000 C CNN
-F 2 "" H 6300 4100 50  0001 C CNN
-F 3 "" H 6300 4100 50  0001 C CNN
-F 4 "Arduino Due" H 5750 3650 50  0001 C CNN "Part Number"
-	1    5750 3650
+P 7150 3550
+F 0 "MCU1" H 7150 6365 50  0000 C CNN
+F 1 "ArduinoDue" H 7150 6274 50  0000 C CNN
+F 2 "" H 7700 4000 50  0001 C CNN
+F 3 "" H 7700 4000 50  0001 C CNN
+F 4 "Arduino Due" H 7150 3550 50  0001 C CNN "Part Number"
+	1    7150 3550
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR01
 U 1 1 5B80BD7C
-P 4450 6500
-F 0 "#PWR01" H 4450 6250 50  0001 C CNN
-F 1 "GND" H 4455 6327 50  0000 C CNN
-F 2 "" H 4450 6500 50  0001 C CNN
-F 3 "" H 4450 6500 50  0001 C CNN
-	1    4450 6500
+P 5850 6400
+F 0 "#PWR01" H 5850 6150 50  0001 C CNN
+F 1 "GND" H 5855 6227 50  0000 C CNN
+F 2 "" H 5850 6400 50  0001 C CNN
+F 3 "" H 5850 6400 50  0001 C CNN
+	1    5850 6400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5000 5300 4450 5300
+	6400 5200 5850 5200
 Wire Wire Line
-	4450 5300 4450 6500
+	5850 5200 5850 6400
 $Comp
 L Connector_Generic:Conn_01x02 J1
 U 1 1 5B80C4AE
@@ -67,7 +67,7 @@ $EndComp
 Wire Wire Line
 	1050 1050 1350 1050
 Wire Wire Line
-	1350 1050 1350 950 
+	1350 1050 1350 1000
 $Comp
 L power:GND #PWR04
 U 1 1 5B80C870
@@ -82,7 +82,7 @@ $EndComp
 Wire Wire Line
 	1050 1150 1350 1150
 Wire Wire Line
-	1350 1150 1350 1250
+	1350 1150 1350 1200
 $Comp
 L power:+12V #PWR02
 U 1 1 5B80D2BC
@@ -246,12 +246,6 @@ F 3 "" H 3750 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
-	600  550  4000 550 
-Wire Notes Line
-	4000 550  4000 1500
-Wire Notes Line
-	4000 1500 600  1500
-Wire Notes Line
 	600  1500 600  550 
 Wire Notes Line
 	600  1600 600  3100
@@ -295,8 +289,426 @@ Wire Notes Line
 Wire Notes Line
 	600  1600 4100 1600
 Wire Wire Line
-	2500 2100 3750 2100
+	2500 2100 3250 2100
 Wire Wire Line
 	3750 2000 3750 2100
 Connection ~ 3750 2100
+$Comp
+L Transistor_FET:IRF2805 FET1
+U 1 1 5B8488DE
+P 1900 3750
+F 0 "FET1" H 2050 3950 50  0000 L CNN
+F 1 "IRF2805" H 2050 3850 50  0000 L CNN
+F 2 "" H 1900 3450 50  0001 C CNN
+F 3 "E:\\Documents\\Development\\3D Printer Driver Electronics\\Component Datasheets\\AUIRF2805.pdf" H 1900 3450 50  0001 C CNN
+F 4 "IRF2805" H 1900 3750 50  0001 C CNN "Part Number"
+	1    1900 3750
+	1    0    0    -1  
+$EndComp
+Text GLabel 1400 3750 0    50   Input ~ 0
+BED_HEAT_CTRL
+$Comp
+L power:+12V #PWR07
+U 1 1 5B849D1B
+P 2500 3500
+F 0 "#PWR07" H 2500 3350 50  0001 C CNN
+F 1 "+12V" H 2515 3673 50  0000 C CNN
+F 2 "" H 2500 3500 50  0001 C CNN
+F 3 "" H 2500 3500 50  0001 C CNN
+	1    2500 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 3750 1550 3750
+$Comp
+L Device:R R1
+U 1 1 5B84CC96
+P 1550 3950
+F 0 "R1" H 1620 3996 50  0000 L CNN
+F 1 "100K" H 1620 3905 50  0000 L CNN
+F 2 "" V 1480 3950 50  0001 C CNN
+F 3 "~" H 1550 3950 50  0001 C CNN
+	1    1550 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 3800 1550 3750
+Connection ~ 1550 3750
+Wire Wire Line
+	1550 3750 1650 3750
+Wire Wire Line
+	1550 4100 1550 4150
+$Comp
+L power:GND #PWR012
+U 1 1 5B84E770
+P 2650 6600
+F 0 "#PWR012" H 2650 6350 50  0001 C CNN
+F 1 "GND" H 2655 6427 50  0000 C CNN
+F 2 "" H 2650 6600 50  0001 C CNN
+F 3 "" H 2650 6600 50  0001 C CNN
+	1    2650 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 3950 1950 4050
+Wire Wire Line
+	1950 4050 2500 4050
+Wire Wire Line
+	2500 3950 2500 4050
+$Comp
+L Diode:1N5408 D2
+U 1 1 5B85A27F
+P 2500 3800
+F 0 "D2" V 2500 3650 50  0000 L CNN
+F 1 "1N5408" V 2600 3450 50  0000 L CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 2500 3625 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88516/1n5400.pdf" H 2500 3800 50  0001 C CNN
+	1    2500 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1950 3550 1950 3500
+Wire Wire Line
+	1950 3500 2500 3500
+Wire Wire Line
+	2500 3500 2500 3650
+$Comp
+L Transistor_FET:IRF2805 FET2
+U 1 1 5B85CF0E
+P 1900 4950
+F 0 "FET2" H 2050 5150 50  0000 L CNN
+F 1 "IRF2805" H 2050 5050 50  0000 L CNN
+F 2 "" H 1900 4650 50  0001 C CNN
+F 3 "E:\\Documents\\Development\\3D Printer Driver Electronics\\Component Datasheets\\AUIRF2805.pdf" H 1900 4650 50  0001 C CNN
+F 4 "IRF2805" H 1900 4950 50  0001 C CNN "Part Number"
+	1    1900 4950
+	1    0    0    -1  
+$EndComp
+Text GLabel 1400 4950 0    50   Input ~ 0
+HOT0_HEAT_CTRL
+Wire Wire Line
+	1400 4950 1550 4950
+$Comp
+L Device:R R2
+U 1 1 5B85CF17
+P 1550 5150
+F 0 "R2" H 1620 5196 50  0000 L CNN
+F 1 "100K" H 1620 5105 50  0000 L CNN
+F 2 "" V 1480 5150 50  0001 C CNN
+F 3 "~" H 1550 5150 50  0001 C CNN
+	1    1550 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 5000 1550 4950
+Connection ~ 1550 4950
+Wire Wire Line
+	1550 4950 1650 4950
+Wire Wire Line
+	1550 5300 1550 5350
+Wire Wire Line
+	1950 5150 1950 5250
+Wire Wire Line
+	1950 5250 2500 5250
+Wire Wire Line
+	2500 5150 2500 5250
+$Comp
+L Diode:1N5408 D3
+U 1 1 5B85CF28
+P 2500 5000
+F 0 "D3" V 2500 4850 50  0000 L CNN
+F 1 "1N5408" V 2600 4650 50  0000 L CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 2500 4825 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88516/1n5400.pdf" H 2500 5000 50  0001 C CNN
+	1    2500 5000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1950 4750 1950 4700
+Wire Wire Line
+	1950 4700 2500 4700
+Wire Wire Line
+	2500 4700 2500 4850
+Connection ~ 2500 4700
+$Comp
+L Transistor_FET:IRF2805 FET3
+U 1 1 5B868936
+P 1900 6150
+F 0 "FET3" H 2050 6350 50  0000 L CNN
+F 1 "IRF2805" H 2050 6250 50  0000 L CNN
+F 2 "" H 1900 5850 50  0001 C CNN
+F 3 "E:\\Documents\\Development\\3D Printer Driver Electronics\\Component Datasheets\\AUIRF2805.pdf" H 1900 5850 50  0001 C CNN
+F 4 "IRF2805" H 1900 6150 50  0001 C CNN "Part Number"
+	1    1900 6150
+	1    0    0    -1  
+$EndComp
+Text GLabel 1400 6150 0    50   Input ~ 0
+HOT1_HEAT_CTRL
+Wire Wire Line
+	1400 6150 1550 6150
+$Comp
+L Device:R R3
+U 1 1 5B86893F
+P 1550 6350
+F 0 "R3" H 1620 6396 50  0000 L CNN
+F 1 "100K" H 1620 6305 50  0000 L CNN
+F 2 "" V 1480 6350 50  0001 C CNN
+F 3 "~" H 1550 6350 50  0001 C CNN
+	1    1550 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 6200 1550 6150
+Connection ~ 1550 6150
+Wire Wire Line
+	1550 6150 1650 6150
+Wire Wire Line
+	1550 6500 1550 6550
+Wire Wire Line
+	1950 6350 1950 6450
+Wire Wire Line
+	1950 6450 2500 6450
+Wire Wire Line
+	2500 6350 2500 6450
+$Comp
+L Diode:1N5408 D4
+U 1 1 5B868950
+P 2500 6200
+F 0 "D4" V 2500 6050 50  0000 L CNN
+F 1 "1N5408" V 2600 5850 50  0000 L CNN
+F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 2500 6025 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88516/1n5400.pdf" H 2500 6200 50  0001 C CNN
+	1    2500 6200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1950 5950 1950 5900
+Wire Wire Line
+	1950 5900 2500 5900
+Wire Wire Line
+	2500 5900 2500 6050
+Connection ~ 2500 5900
+Text Notes 650  3300 0    50   ~ 0
+Heater Control
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5B889F6C
+P 1450 1000
+F 0 "TP1" V 1404 1188 50  0000 L CNN
+F 1 "TestPoint" V 1495 1188 50  0000 L CNN
+F 2 "" H 1650 1000 50  0001 C CNN
+F 3 "~" H 1650 1000 50  0001 C CNN
+	1    1450 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5B88A05C
+P 1450 1200
+F 0 "TP2" V 1404 1388 50  0000 L CNN
+F 1 "TestPoint" V 1495 1388 50  0000 L CNN
+F 2 "" H 1650 1200 50  0001 C CNN
+F 3 "~" H 1650 1200 50  0001 C CNN
+	1    1450 1200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1350 1000 1450 1000
+Connection ~ 1350 1000
+Wire Wire Line
+	1350 1000 1350 950 
+Wire Wire Line
+	1350 1200 1450 1200
+Connection ~ 1350 1200
+Wire Wire Line
+	1350 1200 1350 1250
+$Comp
+L Connector:TestPoint TP6
+U 1 1 5B891770
+P 3250 2050
+F 0 "TP6" H 3308 2170 50  0000 L CNN
+F 1 "TestPoint" H 3308 2079 50  0000 L CNN
+F 2 "" H 3450 2050 50  0001 C CNN
+F 3 "~" H 3450 2050 50  0001 C CNN
+	1    3250 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 2050 3250 2100
+Connection ~ 3250 2100
+Wire Wire Line
+	3250 2100 3750 2100
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5B894423
+P 2650 3950
+F 0 "TP3" H 2708 4070 50  0000 L CNN
+F 1 "TestPoint" H 2708 3979 50  0000 L CNN
+F 2 "" H 2850 3950 50  0001 C CNN
+F 3 "~" H 2850 3950 50  0001 C CNN
+	1    2650 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5B8945F0
+P 2650 5150
+F 0 "TP4" H 2708 5270 50  0000 L CNN
+F 1 "TestPoint" H 2708 5179 50  0000 L CNN
+F 2 "" H 2850 5150 50  0001 C CNN
+F 3 "~" H 2850 5150 50  0001 C CNN
+	1    2650 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5B896DD5
+P 2650 6350
+F 0 "TP5" H 2708 6470 50  0000 L CNN
+F 1 "TestPoint" H 2708 6379 50  0000 L CNN
+F 2 "" H 2850 6350 50  0001 C CNN
+F 3 "~" H 2850 6350 50  0001 C CNN
+	1    2650 6350
+	1    0    0    -1  
+$EndComp
+Connection ~ 2500 5250
+Connection ~ 2500 4050
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5B8CB67E
+P 3150 4050
+F 0 "J3" H 3230 4042 50  0000 L CNN
+F 1 "Conn_01x02" H 3230 3951 50  0000 L CNN
+F 2 "" H 3150 4050 50  0001 C CNN
+F 3 "E:\\Documents\\Development\\3D Printer Driver Electronics\\Component Datasheets\\MA522-500M02.pdf" H 3150 4050 50  0001 C CNN
+F 4 "MA522-500M02" H 3150 4050 50  0001 C CNN "Part Number"
+	1    3150 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5B8CDFD2
+P 2650 4200
+F 0 "#PWR010" H 2650 3950 50  0001 C CNN
+F 1 "GND" H 2655 4027 50  0000 C CNN
+F 2 "" H 2650 4200 50  0001 C CNN
+F 3 "" H 2650 4200 50  0001 C CNN
+	1    2650 4200
+	1    0    0    -1  
+$EndComp
+Connection ~ 2500 3500
+Wire Wire Line
+	2500 4050 2650 4050
+Wire Wire Line
+	2650 4050 2650 3950
+Wire Wire Line
+	1550 4150 2650 4150
+Wire Wire Line
+	2650 4150 2650 4200
+Wire Wire Line
+	2650 4050 2950 4050
+Connection ~ 2650 4050
+Wire Wire Line
+	2650 4150 2950 4150
+Connection ~ 2650 4150
+$Comp
+L power:+12V #PWR08
+U 1 1 5B8E0FC8
+P 2500 4700
+F 0 "#PWR08" H 2500 4550 50  0001 C CNN
+F 1 "+12V" H 2515 4873 50  0000 C CNN
+F 2 "" H 2500 4700 50  0001 C CNN
+F 3 "" H 2500 4700 50  0001 C CNN
+	1    2500 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5B8E114A
+P 2650 5400
+F 0 "#PWR011" H 2650 5150 50  0001 C CNN
+F 1 "GND" H 2655 5227 50  0000 C CNN
+F 2 "" H 2650 5400 50  0001 C CNN
+F 3 "" H 2650 5400 50  0001 C CNN
+	1    2650 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5B8E7979
+P 3150 5250
+F 0 "J4" H 3230 5242 50  0000 L CNN
+F 1 "Conn_01x02" H 3230 5151 50  0000 L CNN
+F 2 "" H 3150 5250 50  0001 C CNN
+F 3 "E:\\Documents\\Development\\3D Printer Driver Electronics\\Component Datasheets\\MA522-500M02.pdf" H 3150 5250 50  0001 C CNN
+F 4 "MA522-500M02" H 3150 5250 50  0001 C CNN "Part Number"
+	1    3150 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 5250 2650 5250
+Wire Wire Line
+	1550 5350 2650 5350
+Wire Wire Line
+	2650 5150 2650 5250
+Connection ~ 2650 5250
+Wire Wire Line
+	2650 5250 2950 5250
+Wire Wire Line
+	2650 5400 2650 5350
+Connection ~ 2650 5350
+Wire Wire Line
+	2650 5350 2950 5350
+$Comp
+L power:+12V #PWR09
+U 1 1 5B8F05C1
+P 2500 5900
+F 0 "#PWR09" H 2500 5750 50  0001 C CNN
+F 1 "+12V" H 2515 6073 50  0000 C CNN
+F 2 "" H 2500 5900 50  0001 C CNN
+F 3 "" H 2500 5900 50  0001 C CNN
+	1    2500 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 6550 2650 6550
+Wire Wire Line
+	2650 6600 2650 6550
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5B8F2C2D
+P 3100 6450
+F 0 "J2" H 3180 6442 50  0000 L CNN
+F 1 "Conn_01x02" H 3180 6351 50  0000 L CNN
+F 2 "" H 3100 6450 50  0001 C CNN
+F 3 "E:\\Documents\\Development\\3D Printer Driver Electronics\\Component Datasheets\\MA522-500M02.pdf" H 3100 6450 50  0001 C CNN
+F 4 "MA522-500M02" H 3100 6450 50  0001 C CNN "Part Number"
+	1    3100 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 6450 2650 6450
+Connection ~ 2500 6450
+Wire Wire Line
+	2650 6550 2900 6550
+Connection ~ 2650 6550
+Wire Wire Line
+	2650 6350 2650 6450
+Connection ~ 2650 6450
+Wire Wire Line
+	2650 6450 2900 6450
+Wire Notes Line
+	4100 3200 4100 6900
+Wire Notes Line
+	4100 6900 600  6900
+Wire Notes Line
+	600  3200 4100 3200
+Wire Notes Line
+	600  3200 600  6900
+Wire Notes Line
+	4100 550  4100 1500
+Wire Notes Line
+	600  550  4100 550 
+Wire Notes Line
+	600  1500 4100 1500
 $EndSCHEMATC
