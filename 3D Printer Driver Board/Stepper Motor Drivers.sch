@@ -1,0 +1,240 @@
+EESchema Schematic File Version 4
+LIBS:3D Printer Driver Board-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Driver_Motor:Pololu_Breakout_A4988 A1
+U 1 1 5B879C96
+P 2400 1750
+F 0 "A1" H 2700 1400 50  0000 C CNN
+F 1 "A4988" H 2650 1300 50  0000 C CNN
+F 2 "Module:Pololu_Breakout-16_15.2x20.3mm" H 2675 1000 50  0001 L CNN
+F 3 "https://www.pololu.com/product/2980/pictures" H 2500 1450 50  0001 C CNN
+F 4 "A4988 Breakout Board" H 2400 1750 50  0001 C CNN "Part Number"
+	1    2400 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR017
+U 1 1 5B879E09
+P 2600 950
+F 0 "#PWR017" H 2600 800 50  0001 C CNN
+F 1 "+12V" H 2615 1123 50  0000 C CNN
+F 2 "" H 2600 950 50  0001 C CNN
+F 3 "" H 2600 950 50  0001 C CNN
+	1    2600 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 950  2600 1050
+$Comp
+L power:+3.3V #PWR016
+U 1 1 5B87A0CE
+P 2300 950
+F 0 "#PWR016" H 2300 800 50  0001 C CNN
+F 1 "+3.3V" H 2315 1123 50  0000 C CNN
+F 2 "" H 2300 950 50  0001 C CNN
+F 3 "" H 2300 950 50  0001 C CNN
+	1    2300 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 950  2400 1050
+Wire Wire Line
+	2300 950  2400 950 
+$Comp
+L power:GND #PWR018
+U 1 1 5B87A39E
+P 2600 2700
+F 0 "#PWR018" H 2600 2450 50  0001 C CNN
+F 1 "GND" H 2605 2527 50  0000 C CNN
+F 2 "" H 2600 2700 50  0001 C CNN
+F 3 "" H 2600 2700 50  0001 C CNN
+	1    2600 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 2550 2400 2600
+Wire Wire Line
+	2400 2600 2600 2600
+Wire Wire Line
+	2600 2600 2600 2700
+Wire Wire Line
+	2600 2550 2600 2600
+Connection ~ 2600 2600
+Wire Wire Line
+	1900 1350 2000 1350
+Wire Wire Line
+	2000 1450 1900 1450
+Wire Wire Line
+	1900 1650 2000 1650
+Wire Wire Line
+	1900 1750 2000 1750
+Wire Wire Line
+	2000 1850 1900 1850
+$Comp
+L Switch:SW_DIP_x03 SW1
+U 1 1 5B87B097
+P 1250 2250
+F 0 "SW1" H 1250 2000 50  0000 C CNN
+F 1 "EDS03SGRSTU04Q" H 1100 2100 50  0000 C CNN
+F 2 "" H 1250 2250 50  0001 C CNN
+F 3 "E:\\Documents\\Development\\3D Printer Driver Electronics\\Component Datasheets\\EDS03SGRSTU04Q.pdf" H 1250 2250 50  0001 C CNN
+F 4 "EDS03SGRSTU04Q" H 1250 2250 50  0001 C CNN "Part Number"
+	1    1250 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 2050 1850 2050
+Wire Wire Line
+	2000 2150 1700 2150
+Wire Wire Line
+	2000 2250 1550 2250
+Wire Wire Line
+	1550 2350 1550 2250
+Connection ~ 1550 2250
+$Comp
+L Device:R R5
+U 1 1 5B87B8A7
+P 1700 2500
+F 0 "R5" H 1700 2650 50  0000 L CNN
+F 1 "100K" V 1700 2400 50  0000 L CNN
+F 2 "" V 1630 2500 50  0001 C CNN
+F 3 "~" H 1700 2500 50  0001 C CNN
+	1    1700 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5B87B8C7
+P 1850 2500
+F 0 "R6" H 1850 2650 50  0000 L CNN
+F 1 "100K" V 1850 2400 50  0000 L CNN
+F 2 "" V 1780 2500 50  0001 C CNN
+F 3 "~" H 1850 2500 50  0001 C CNN
+	1    1850 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5B87B966
+P 1550 2500
+F 0 "R4" H 1550 2650 50  0000 L CNN
+F 1 "100K" V 1550 2400 50  0000 L CNN
+F 2 "" V 1480 2500 50  0001 C CNN
+F 3 "~" H 1550 2500 50  0001 C CNN
+	1    1550 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 2350 1700 2150
+Connection ~ 1700 2150
+Wire Wire Line
+	1700 2150 1550 2150
+Wire Wire Line
+	1850 2350 1850 2050
+Connection ~ 1850 2050
+Wire Wire Line
+	1850 2050 2000 2050
+Wire Wire Line
+	1550 2650 1550 2700
+Wire Wire Line
+	1550 2700 1700 2700
+Wire Wire Line
+	1850 2700 1850 2650
+Wire Wire Line
+	1700 2650 1700 2700
+Connection ~ 1700 2700
+Wire Wire Line
+	1700 2700 1850 2700
+Wire Wire Line
+	1700 2700 1700 2800
+$Comp
+L power:GND #PWR015
+U 1 1 5B87CA58
+P 1700 2800
+F 0 "#PWR015" H 1700 2550 50  0001 C CNN
+F 1 "GND" H 1705 2627 50  0000 C CNN
+F 2 "" H 1700 2800 50  0001 C CNN
+F 3 "" H 1700 2800 50  0001 C CNN
+	1    1700 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR014
+U 1 1 5B87CE77
+P 800 2000
+F 0 "#PWR014" H 800 1850 50  0001 C CNN
+F 1 "+3V3" H 815 2173 50  0000 C CNN
+F 2 "" H 800 2000 50  0001 C CNN
+F 3 "" H 800 2000 50  0001 C CNN
+	1    800  2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  2000 800  2050
+Wire Wire Line
+	800  2050 950  2050
+Wire Wire Line
+	950  2250 800  2250
+Wire Wire Line
+	800  2250 800  2150
+Connection ~ 800  2050
+Wire Wire Line
+	950  2150 800  2150
+Connection ~ 800  2150
+Wire Wire Line
+	800  2150 800  2050
+$Comp
+L Connector_Generic:Conn_01x04 J5
+U 1 1 5B87E16F
+P 3250 1750
+F 0 "J5" H 3330 1742 50  0000 L CNN
+F 1 "MB312-500M04" H 3330 1651 50  0000 L CNN
+F 2 "" H 3250 1750 50  0001 C CNN
+F 3 "E:\\Documents\\Development\\3D Printer Driver Electronics\\Component Datasheets\\MB312-500M04.pdf" H 3250 1750 50  0001 C CNN
+F 4 "MB312-500M04" H 3250 1750 50  0001 C CNN "Part Number"
+	1    3250 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 1650 3050 1650
+Wire Wire Line
+	2900 1750 3050 1750
+Wire Wire Line
+	2900 1850 3050 1850
+Wire Wire Line
+	2900 1950 3050 1950
+Wire Notes Line
+	600  600  600  3050
+Wire Notes Line
+	600  3050 4000 3050
+Wire Notes Line
+	4000 3050 4000 600 
+Wire Notes Line
+	4000 600  600  600 
+Text Notes 650  700  0    50   ~ 0
+Extruder 0 Stepper Driver
+Text HLabel 1900 1350 0    50   Input ~ 0
+EXTRD0_RST
+Text HLabel 1900 1450 0    50   Input ~ 0
+EXTRD0_SLP
+Text HLabel 1900 1650 0    50   Input ~ 0
+EXTRD0_EN
+Text HLabel 1900 1750 0    50   Input ~ 0
+EXTRD0_STP
+Text HLabel 1900 1850 0    50   Input ~ 0
+EXTRD0_DIR
+$EndSCHEMATC
