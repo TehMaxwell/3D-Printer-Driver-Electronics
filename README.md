@@ -4,7 +4,7 @@ This is a custom 3D Printer Driver Electronics board for use with an Arduino Due
 
 ## Development Specification
 
-The following a set of requirements that the end PCB will attempt to achieve. Some of these requirements may become stretch goals for a Version 2 of the circuit board
+The following are a set of requirements that the end PCB will attempt to achieve. Some of these requirements may become stretch goals for a Version 2 of the circuit board
 depending upon the complexity of the development and the cost of the additional requirements.
 
 The following are the requirements for the Driver Electronics:
@@ -33,7 +33,7 @@ The following are the requirements for the Driver Electronics:
 - PID Control Capable for Hot End.
 - PID Control Capable for Heated Bed.
 - Support for 3 Temperature Probes (Thermisters or Thermocouples).
-- PID Control for 4 Fans.
+- PWM Control for 4 Fans.
 
 Please don't hesitate to make suggestions for additional functionality of changes to this specification. Progress on these requirements will be tracked in this README as and when they are added
 to the circuit board. When the functionality is verified working it will be labelled as *VERIFIED FUNCTIONAL*.
